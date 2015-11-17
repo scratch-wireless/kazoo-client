@@ -16,8 +16,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Setter;
 
-import org.scratchwireless.kazoo.client.domain.orig.CallRestriction;
-
 import com.google.api.client.util.Key;
 import com.google.api.client.util.Value;
 
