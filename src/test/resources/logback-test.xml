@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
+
+	<!-- put your appenders -->
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{ISO8601} %-5p [%t] [%c] %m%n</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+
+	<!-- <appender name="FILE" -->
+	<!-- class="ch.qos.logback.core.rolling.RollingFileAppender"> -->
+	<!-- <file>gy_integration.log</file> -->
+	<!-- <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> -->
+	<!-- <fileNamePattern>kazoo_client.log-%d{yyyyMMdd} -->
+	<!-- </fileNamePattern> -->
+	<!-- <maxHistory>4</maxHistory> -->
+	<!-- </rollingPolicy> -->
+	<!-- <encoder> -->
+	<!-- <pattern>%d{ISO8601} %-5p [%t] [%c] %m%n</pattern> -->
+	<!-- </encoder> -->
+	<!-- </appender> -->
+
+	<!-- See all the Scratch log messages -->
+	<logger name="com.scratchwireless" level="DEBUG" />
+	<logger name="org.scratchwireless" level="DEBUG" />
+
+	<!-- Turn down other noisy loggers here -->
+	<logger name="com.google.api" level="DEBUG" />
+
+	<!-- DEBUG level logging to console and file, by default -->
+	<root level="DEBUG">
+		<appender-ref ref="CONSOLE" />
+		<!-- <appender-ref ref="FILE" /> -->
+	</root>
+</configuration>
